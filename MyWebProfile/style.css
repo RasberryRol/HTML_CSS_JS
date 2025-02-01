@@ -1,0 +1,403 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    min-width: 370px;
+    min-height: 500px;
+}
+
+.welcomeAndHeader{
+    height: 100vh;
+    background-image: linear-gradient(rgba(120, 123, 134, 0.349), rgba(4, 9, 30, 0.364)), url(images/brooklynBridge.avif);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+nav{
+    display: inline-block;
+    height: 33vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+    color: #fff;
+    padding: 20px;
+    background: rgba(49, 56, 85, 0.575);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+nav p{
+    width: 50%;
+    flex: 1 1 0;
+    padding-top: 40px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+.profile{
+    text-align: center;
+}
+.profile img{
+    width: 100px;
+    border-radius: 50%;
+    height: 130px;
+}
+.profile h6{
+    position: relative;
+    width: 90%;
+    height: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 14px;
+    padding-top: 2px;
+	background-color: rgba(26, 39, 156, 0.767); /*for compatibility with older browsers*/
+	background-image: linear-gradient(rgb(6, 33, 187),rgb(111, 109, 223));
+	text-decoration: none;
+	color: #fff;
+    cursor: pointer;
+}
+nav .fa-solid{
+    display: none;
+}
+.navlinks{
+    width: 150px;
+    text-align: left;
+    position: relative;
+    padding-top: 25px;
+}
+.navlinks ul{
+    list-style: none;
+    position: absolute;
+    right: 30px;
+    text-align: center;
+}
+.navlinks ul li{
+    padding-bottom: 12px;
+    cursor: pointer;
+}
+.navlinks ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+.navlinks ul li::after{
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: rgb(255, 0, 0);
+    margin: auto;
+    transition: 0.8s;
+}
+.navlinks ul li:hover::after{
+    width: 100%;
+}
+.welcomeBox{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    padding: 0 100px;
+    margin-top: 100px;
+}
+.welcomeBox h1{
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+.welcomeBox p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.details{
+    padding-top: 25px; 
+    background-image: linear-gradient(rgb(165, 166, 177),rgb(49, 49, 51));
+}
+
+@media(max-width: 700px){
+    nav{
+        padding: 10px;
+        width: 100%;
+        height: 24vh;
+        border-radius: 0;
+        gap: 40px;
+    }
+    nav p{
+        max-width: 68%;
+        font-size: 17px;
+        font-weight: normal;
+        padding-top: 7px;
+        
+    }
+    .navlinks{
+        display: none;
+    }
+    .profile img{
+        width: 70px;
+        height: 75px;
+        border-radius: 50%;
+    }
+    .profile h6{
+        width: 80px; 
+        font-size: 12px;
+    }
+    nav .fa-solid{
+        display: block;
+        position: relative;
+        font-size: 20px;
+        flex-basis: 30px;
+        top: 30%;
+    }
+    .welcomeBox{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        color: #fff;
+        padding: 0 10px;
+        margin-top: 70px;
+    }
+    .welcomeBox h1{
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    .welcomeBox p{
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+/* Background */
+.background{
+    padding: 20px;
+    text-align: center;
+}
+.story{
+    display: inline-block;
+    width: 80%;
+}
+.story p{
+    color: #fff;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    background-image: linear-gradient(rgb(6, 22, 145),rgb(120, 120, 231));
+    border-radius: 16px;
+}
+.story p:hover{
+    box-shadow: 0 5px 8px 0 rgb(248, 243, 243), 0 3px 10px 0 rgb(23, 34, 136);    
+}
+
+@media(max-width: 700px){
+    .background{
+        width: 100%;
+        padding: 10px;
+    }
+    .story{
+        width: 100%;
+    }
+    .story p{
+        margin: 15px 0 15px 0;
+        padding: 14px;
+    }
+}
+
+
+/* Education */
+.education{
+    padding: 0 20px 20px;
+    text-align: center;
+    margin-top: 25px;
+}
+.diplomasAndCerts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.diplomas, .certificates{
+    flex-basis: 32%;
+    height: 160px;
+    color: #fff;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    background-image: linear-gradient(rgb(6, 22, 145),rgb(124, 124, 240));
+    border-radius: 16px;
+}
+
+@media(max-width: 700px){
+    .diplomas, .certificates{
+        height: 180px;
+    }
+    .diplomas{
+        margin-left: 30px;
+        margin-right: 10px;
+    }
+    .certificates{
+        margin-left: 10px;
+        margin-right: 30px;
+    }
+}
+
+.diplomas:hover, .certificates:hover{
+    box-shadow: 0 5px 8px 0 rgb(248, 243, 243), 0 3px 10px 0 rgb(23, 34, 136);    
+}
+.diplomas h1, .certifactes h1{
+    margin-bottom: 10px;
+}
+.diplomas ul li, .certificates ul li{
+    list-style: none;
+    padding: 10px 0;
+}
+.schoolsAttended{
+    text-align: center;
+    padding: 0 20px 20px;
+    margin-top: 25px;
+}
+.schoolsAttended h1{
+    font-size: 25px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+.campus{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width: 700px){
+    .campus{
+        flex-direction: column;
+    }
+    .campus .campus-col{
+        margin: 20px 0 50px 0;
+        padding: 0;
+    }
+}
+
+.campus-col{
+    margin: 10px;
+    height: auto;
+    color: #fff;     
+    flex-basis: 30%;
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.campus-col img{
+    max-width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    box-shadow: 0 1px 8px 0 rgb(248, 243, 243), 0 3px 10px 0 rgb(23, 34, 136);    
+}
+span{
+    position: absolute;
+    color: black;
+    font-size: 15px;
+    display: block;
+    text-align: right;
+    width: 100%;
+}
+@media(max-width: 700px){
+    span{
+        display: none;
+    }
+}
+.layer{
+    position: absolute;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(190, 194, 248, 0.61);
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.layer p{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+    color: #000002;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover p{
+    opacity: 1;
+    bottom: 50%;
+}
+
+@media(max-width: 700px){
+    .layer{
+        height: 113%;
+    }
+    .layer p{
+        font-size: 15px;
+        opacity: 1;
+    }
+}
+
+
+
+/* contacts */
+.contacts{
+    text-align: center;
+    padding: 0 20px 20px;
+    margin-top: 25px;
+}
+.info{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 20px;
+}
+.contacts img{
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+.contacts .media{
+    position: relative;
+    top: 2px;
+}
+.contacts .media p{
+    padding: 35px;
+    text-align: start;
+    font-size: large;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.contacts .media p a{
+    color: black;
+    font-size: large;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media(max-width: 700px){
+    .contacts .media p{
+        font-size: 17px;
+        padding-left: 10px;
+    }
+}
+
